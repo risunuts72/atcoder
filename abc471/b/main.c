@@ -5,6 +5,7 @@ void to_lowercase(char *str) {
 	while (*str) {
 		if (*str == '\r' || *str == '\n') {
 			*str = 0;
+			break;
 		}
 		*str |= 0x20;
 		str++;
@@ -14,8 +15,8 @@ void to_lowercase(char *str) {
 int main(void) {
 	int n;
 	char buf[13];
-	char strings[100][11] = {0};
-	int counts[100] = {0};
+	char strings[101][11] = {0};
+	int counts[101] = {0};
 	int match = 0;
 	int i, j, k;
 	int max = 0;
