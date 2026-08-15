@@ -48,7 +48,7 @@ int downheap(int *pheap) {
 int main(void) {
 	int q, v;
 	int type, t, w;
-	int heap[30001] = {0};
+	int heap[300001] = {0};
 
 	scanf("%d %d\n", &q, &v);
 	for (int i = 0; i < q; i++) {
