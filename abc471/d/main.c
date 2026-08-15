@@ -28,9 +28,9 @@ int downheap(int *pheap) {
 	ret = pheap[1];
 	pheap[1] = pheap[(*pheap)--];
 	cur = 1;
-	while (cur * 2 < *pheap) {
+	while (cur * 2 <= *pheap) {
 		child = cur * 2;
-		if (child + 1 < *pheap && pheap[child+1] > pheap[child]) {
+		if (child + 1 <= *pheap && pheap[child+1] > pheap[child]) {
 			++child;
 		}
 		if (pheap[cur] < pheap[child]) {
